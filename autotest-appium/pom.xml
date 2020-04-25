@@ -9,6 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
+    <groupId>com.qianmi</groupId>
     <artifactId>autotest-appium</artifactId>
     <name>${project.artifactId}</name>
     <description>使用Appium driver的基础包</description>
@@ -21,6 +22,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
         </dependency>
         <dependency>
             <groupId>com.qianmi</groupId>

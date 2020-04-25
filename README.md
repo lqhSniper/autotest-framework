@@ -197,3 +197,17 @@ Page Object 对象是指 UI 界面上用于与用户进行交互的对象，一�
 * [HTML5 demo](/autotest-demo/autotest-demo-html5) 执行过程录屏如下：
 
 ![HTML5 demo 执行过程](https://s2.ax1x.com/2019/09/11/nwC74O.gif)
+
+# appium 404
+# html5有待试验，此方法未解决
+对于报404的错，不要怀疑，在环境正常的情况下，一定是你的端口被占用了。
+就用：查看端口：   
+netstat -aon | findstr 5037    
+查看进程：   
+tasklist /fi "PID eq 8200"    
+杀掉进程：   
+taskkill /pid 8200   
+别犹豫的把它杀了吧
+
+
+

@@ -13,7 +13,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class SearchResultPage extends AppBasePage {
 
-    @AndroidFindBy(id = "com.jd.lib.search:id/product_list_item")
+//    @AndroidFindBy(id = "com.jd.lib.search:id/product_list_item")
+    @AndroidFindBy(id = "com.jd.lib.search:id/a43")
     @iOSFindBy(accessibility = "com.jd.lib.search:id/product_list_item")
     private WebElement productItem;
 
@@ -39,5 +40,10 @@ public class SearchResultPage extends AppBasePage {
     public HomePage backToHomePage() {
         wait(backButton).click();
         return gotoPage(HomePage.class);
+    }
+
+    public SearchPage backSearchPage() {
+        wait(backButton).click();
+        return gotoPage(SearchPage.class);
     }
 }

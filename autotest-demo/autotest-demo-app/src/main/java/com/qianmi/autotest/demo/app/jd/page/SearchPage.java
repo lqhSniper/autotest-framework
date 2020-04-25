@@ -14,12 +14,18 @@ import org.springframework.stereotype.Component;
 @Component
 public class SearchPage extends AppBasePage {
 
-    @AndroidFindBy(id = "com.jd.lib.search:id/search_text")
+//    @AndroidFindBy(id = "com.jd.lib.search:id/search_text")
+    @AndroidFindBy(id = "com.jd.lib.search:id/a4p")
     @iOSFindBy(accessibility = "搜索框")
     private WebElement searchField;
 
-    @AndroidFindBy(id = "com.jingdong.app.mall:id/ax2")
+//    @AndroidFindBy(id = "com.jingdong.app.mall:id/ax2")
+    @AndroidFindBy(id = "com.jingdong.app.mall:id/a9b")
     private WebElement searchButton;
+
+    @AndroidFindBy(accessibility = "返回")
+    @iOSFindBy(accessibility = "返回")
+    private WebElement backButton;
 
     /**
      * 搜索商品
@@ -35,5 +41,9 @@ public class SearchPage extends AppBasePage {
             wait(searchField).sendKeys(Keys.ENTER);
         }
         return gotoPage(SearchResultPage.class);
+    }
+    public CategoryPage backCategoryPage() {
+        wait(backButton).click();
+        return gotoPage(CategoryPage.class);
     }
 }

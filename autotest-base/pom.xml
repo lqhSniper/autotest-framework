@@ -9,6 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
+    <groupId>com.qianmi</groupId>
     <artifactId>autotest-base</artifactId>
     <name>${project.artifactId}</name>
     <description>自动化测试基础包</description>

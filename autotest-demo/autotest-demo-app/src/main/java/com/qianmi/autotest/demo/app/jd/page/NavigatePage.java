@@ -23,7 +23,8 @@ public class NavigatePage extends AppBasePage {
     @iOSFindBy(accessibility = "发现")
     private WebElement discoveryButton;
 
-    @AndroidFindBy(accessibility = "购物车")
+    @AndroidFindBy(uiAutomator = "new UiSelector().descriptionStartsWith(\"购物车\")")
+    //    @AndroidFindBy(accessibility = "购物车")
     @iOSFindBy(accessibility = "购物车")
     private WebElement shoppingCartButton;
 
@@ -50,4 +51,10 @@ public class NavigatePage extends AppBasePage {
         wait(homeButton).click();
         return gotoPage(HomePage.class);
     }
+
+    public CategoryPage gotoCategoryPage() {
+        wait(categoryButton).click();
+        return gotoPage(CategoryPage.class);
+    }
+
 }

@@ -23,11 +23,14 @@ public class JdAppTest extends AppPageTest {
         String mate9Name = inputData.getProperty("searchProductName");
 
         pageFacade.gotoPage(HomePage.class)
+                .gotoCategoryPage()
                 .gotoSearchPage()
                 .search(mate9Name)
                 .viewFirstProduct()
                 .backToSearchResultPage()
-                .backToHomePage();
+                .backSearchPage()
+                .backCategoryPage()
+                .gotoHomePage();
     }
 
     /**
@@ -43,12 +46,14 @@ public class JdAppTest extends AppPageTest {
         String mate9Name = inputData.getProperty("searchProductName");
 
         pageFacade.gotoPage(HomePage.class)
+                .gotoCategoryPage()
                 .gotoSearchPage()
                 .search(mate9Name)
                 .viewFirstProduct()
                 .addCart()
                 .backToSearchResultPage()
-                .backToHomePage()
+                .backSearchPage()
+                .backCategoryPage()
                 .gotoCartPage();
     }
 }

@@ -13,15 +13,17 @@ import org.springframework.stereotype.Component;
 @Component
 public class ProductPage extends AppBasePage {
 
-    @AndroidFindBy(id = "com.jd.lib.productdetail:id/pd_invite_friend")
+//    @AndroidFindBy(id = "com.jd.lib.productdetail:id/pd_invite_friend")
+    @AndroidFindBy(id = "com.jd.lib.productdetail:id/amc")
     @iOSFindBy(accessibility = "加入购物车")
     private WebElement addCartButton;
 
-    @AndroidFindBy(id = "com.jd.lib.productdetail:id/title_back")
+//    @AndroidFindBy(id = "com.jd.lib.productdetail:id/title_back")
+    @AndroidFindBy(id = "com.jd.lib.productdetail:id/fd")
     @iOSFindBy(accessibility = "返回")
     private WebElement backButton;
 
-    @AndroidFindBy(id = "com.jd.lib.productdetail:id/detail_style_add_2_car")
+    @AndroidFindBy(id = "com.jd.lib.productdetail:id/axm")
     @iOSFindBy(accessibility = "确定")
     private WebElement okButton;
 

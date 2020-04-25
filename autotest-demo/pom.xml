@@ -9,6 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
+    <groupId>com.qianmi</groupId>
     <artifactId>autotest-demo</artifactId>
     <packaging>pom</packaging>
     <name>${project.artifactId}</name>
