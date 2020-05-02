@@ -7,7 +7,6 @@ import com.qianmi.autotest.base.testng.DefaultReporter;
 import com.qianmi.autotest.base.testng.QmDingNotifier;
 import com.qianmi.autotest.base.testng.TestRetryListener;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.testng.ITestNGListener;
 
 import java.util.ArrayList;
@@ -18,7 +17,6 @@ import java.util.List;
  * Created by liuzhaoming on 16/9/23.
  */
 @SpringBootApplication(scanBasePackages = {"com.qianmi.autotest", "${autotest.scanPackage:}"})
-@EnableConfigurationProperties()
 public class AppTestApplication extends AbstractTestApplication {
 
     public static void main(String[] args) {

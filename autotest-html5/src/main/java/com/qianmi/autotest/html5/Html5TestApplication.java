@@ -7,7 +7,6 @@ import com.qianmi.autotest.base.testng.QmDingNotifier;
 import com.qianmi.autotest.base.testng.TestRetryListener;
 import com.qianmi.autotest.html5.testng.Html5TestRetryAnalyzer;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.testng.ITestNGListener;
 
 import java.util.ArrayList;
@@ -18,7 +17,6 @@ import java.util.List;
  * Created by liuzhaoming on 2016/12/5.
  */
 @SpringBootApplication(scanBasePackages = {"com.qianmi.autotest", "${autotest.scanPackage:}"})
-@EnableConfigurationProperties()
 public class Html5TestApplication extends AbstractTestApplication {
     public static void main(String[] args) {
         Html5TestApplication h5Application = new Html5TestApplication();
